@@ -41,15 +41,13 @@ The actual object points can easily be determined since we know what a chessboar
 
 ![Calibration](output_images/resized_images/Calibration.png) ![Calibration_undistort](output_images/resized_images/Calibration_undistort.png)
 
-------
-
 ### Image Processing Pipeline
 
 #### 1. Undistort the Image
 
 The first step in the image processing pipeline is to use the camera matrix and distortion coefficients calculated during the camera calibration.  Before one can accurately detect lane lines, it is important to ensure that the lane lines are not distorted.  
 
-![Undistorted Image](output_images/test2_undistorted.jpg)
+![Undistorted Image](output_images/resized_images/test2_undistorted.png)
 
 #### 2. Create a Binary Image
 
@@ -63,19 +61,19 @@ In addition to using the Sobel operator for thresholding, the image was converte
 
 ##### RGB Color Space
 
-![test2_rgb](output_images/test2_rgb.png)
+![test2_rgb](output_images/resized_images/test2_rgb.png)
 
 ##### HLS Color Space
 
-![test2_hls](output_images/test2_hls.png)
+![test2_hls](output_images/resized_images/test2_hls.png)
 
 ##### HSV Color Space
 
-![test2_hsv](output_images/test2_hsv.png)
+![test2_hsv](output_images/resized_images/test2_hsv.png)
 
 ##### CIELuv Color Space
 
-![test2_luv](output_images/test2_luv.png)
+![test2_luv](output_images/resized_images/test2_luv.png)
 
 Binary images were created using thresholding for the channels mentioned above.  Then the binary images were combined in a manner that produced good, solid lane lines on the final binary image. 
 
@@ -143,7 +141,7 @@ ym_per_pix = 30/720  # meters per pixel in y dimension
 xm_per_pix = 3.7/700 # meters per pixel in x dimension
 ```
 
-![test2_annotated](output_images/test2_annotated.jpg)
+![test2_annotated](output_images/resized_images/test2_annotated.png)
 
 ------
 
